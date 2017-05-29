@@ -1,0 +1,14 @@
+﻿<div class="panel panel-info">
+    <div class="panel-heading">
+        <div class="panel-title">
+            {{ weatherDay.dt*1000 | date : dateFormat}}
+        </div>
+    </div>
+    <div class="panel-body">
+        <ul>
+            <li>Day Time Temperature: {{ convertToCentigrade({temp: weatherDay.temp.day}) }} &deg;C</li>
+            <li>Minimum Temperature: {{ convertToCentigrade({temp: weatherDay.temp.min}) }} &deg;C</li>
+            <li>Maximum Temperature: {{ convertToCentigrade({temp:weatherDay.temp.max}) }} &deg;C</li>
+        </ul>
+    </div>
+</div>
